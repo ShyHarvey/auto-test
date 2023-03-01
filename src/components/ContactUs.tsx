@@ -83,7 +83,7 @@ export const ContactUs: React.FC<{}> = () => {
                             rules={{
                                 required: 'Введите имя',
                                 pattern: {
-                                    value: /^[a-zA-Z0-9]+$/,
+                                    value: /^[А-Яа-яa-zA-Z0-9]+$/,
                                     message: 'Спецсимволы запрещены',
                                 },
                             }}
@@ -101,7 +101,7 @@ export const ContactUs: React.FC<{}> = () => {
                             rules={{
                                 required: 'Введите сообщение',
                                 pattern: {
-                                    value: /^[a-zA-Z0-9]+$/,
+                                    value: /^[А-Яа-яa-zA-Z0-9]+$/,
                                     message: 'Спецсимволы запрещены',
                                 },
                             }}

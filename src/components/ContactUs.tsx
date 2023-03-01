@@ -80,7 +80,13 @@ export const ContactUs: React.FC<{}> = () => {
                         <Controller
                             name="name"
                             control={control}
-                            rules={{ required: 'Введите имя', }}
+                            rules={{
+                                required: 'Введите имя',
+                                pattern: {
+                                    value: /^[a-zA-Z0-9]+$/,
+                                    message: 'Спецсимволы запрещены',
+                                },
+                            }}
                             render={({ field }) => <TextField {...field}
                                 error={!!errors.name}
                                 focused
@@ -92,7 +98,13 @@ export const ContactUs: React.FC<{}> = () => {
                         <Controller
                             name="message"
                             control={control}
-                            rules={{ required: 'Введите сообщение' }}
+                            rules={{
+                                required: 'Введите сообщение',
+                                pattern: {
+                                    value: /^[a-zA-Z0-9]+$/,
+                                    message: 'Спецсимволы запрещены',
+                                },
+                            }}
                             render={({ field }) => <TextField {...field}
                                 error={!!errors.message}
                                 color={!errors.message ? 'success' : 'error'}
